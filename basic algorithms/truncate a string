@@ -1,0 +1,22 @@
+
+function truncateString(str, num) {
+  var start = 0;
+  var end = num;
+  var roomForDots = end - 3;
+  var slicedStr;
+  var threeDots = "...";
+  if (end <= 3){
+    // Truncate fully then add 3 dots
+    slicedStr = str.slice(start, end) + threeDots;
+    return slicedStr;
+  } else if (end >= str.length){
+    // num is the length of str
+    return str;
+  } else{
+    // Truncate with 3 dots included as total
+    slicedStr = str.slice(start, roomForDots) + threeDots;
+    return slicedStr;
+  }
+}
+
+truncateString("A-tisket a-tasket A green and yellow basket", 11);
