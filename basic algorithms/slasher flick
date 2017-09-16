@@ -1,0 +1,12 @@
+
+function slasher(arr, howMany) {
+  var chop = [];
+  if (howMany > arr.length){
+    return chop;
+  } else {
+    chop = arr.slice(howMany);
+  }
+  return chop;
+}
+
+slasher([1, 2, 3], 2);
