@@ -1,0 +1,20 @@
+function sumAll(arr) {
+  var largerNumber = Math.max(arr[0], arr[1]);
+  var smallerNumber = Math.min(arr[0], arr[1]);
+  var orderedArray = [];
+  
+  // Make an array of the numbers from smallest to largest
+  for (var i = smallerNumber; i <= largerNumber; i++){
+    orderedArray.push(i);
+  }
+  
+  // Sum all the numbers
+  var numbersSumed = orderedArray.reduce(function(a, b){
+    return a + b;
+  });
+  
+  return numbersSumed;
+  
+}
+
+sumAll([1, 4]);
